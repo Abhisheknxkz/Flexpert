@@ -10,11 +10,15 @@ export default defineConfig({
       output: {
         manualChunks: undefined,
       }
-    }
+    },
+    cssCodeSplit: false,
   },
   server: {
     fs: {
       strict: false
     }
+  },
+  css: {
+    postcss: './postcss.config.js',
   }
 })
