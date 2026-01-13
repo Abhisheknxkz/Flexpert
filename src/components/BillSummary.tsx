@@ -7,7 +7,7 @@ interface BillSummaryProps {
 
 const BillSummary: React.FC<BillSummaryProps> = ({ bill }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md p-4">
+    <div className="bg-white rounded-lg shadow-md p-4 flex flex-col h-full">
       <h2 className="text-xl font-bold mb-3 text-gray-800">Bill Summary</h2>
       
       {bill.appliedOffers.length > 0 && (

@@ -30,7 +30,7 @@ const Basket: React.FC<BasketProps> = ({ items }) => {
 
   if (items.length === 0) {
     return (
-      <div className="bg-white rounded-lg shadow-md p-4">
+      <div className="bg-white rounded-lg shadow-md p-4 flex flex-col h-full">
         <h2 className="text-xl font-bold mb-3 text-gray-800">Basket</h2>
         <p className="text-gray-600 text-sm">Your basket is empty</p>
       </div>
@@ -38,7 +38,7 @@ const Basket: React.FC<BasketProps> = ({ items }) => {
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-4">
+    <div className="bg-white rounded-lg shadow-md p-4 flex flex-col h-full">
       <h2 className="text-xl font-bold mb-3 text-gray-800">Basket</h2>
       <div className="space-y-3">
         {items.map((item) => {

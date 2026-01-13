@@ -15,7 +15,7 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-4">
+    <div className="bg-white rounded-lg shadow-md p-4 flex flex-col h-full">
       <h2 className="text-xl font-bold mb-3 text-gray-800">Products</h2>
       <div className="space-y-2">
         {products.map((product) => (
