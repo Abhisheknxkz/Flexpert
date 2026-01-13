@@ -30,48 +30,48 @@ const Basket: React.FC<BasketProps> = ({ items }) => {
 
   if (items.length === 0) {
     return (
-      <div className="bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-2xl font-bold mb-4 text-gray-800">Basket</h2>
-        <p className="text-gray-600">Your basket is empty</p>
+      <div className="bg-white rounded-lg shadow-md p-4">
+        <h2 className="text-xl font-bold mb-3 text-gray-800">Basket</h2>
+        <p className="text-gray-600 text-sm">Your basket is empty</p>
       </div>
     );
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-6">
-      <h2 className="text-2xl font-bold mb-4 text-gray-800">Basket</h2>
-      <div className="space-y-4">
+    <div className="bg-white rounded-lg shadow-md p-4">
+      <h2 className="text-xl font-bold mb-3 text-gray-800">Basket</h2>
+      <div className="space-y-3">
         {items.map((item) => {
           const itemTotal = item.product.price * item.quantity;
           const savings = getItemSavings(item);
           const finalCost = getItemCostAfterSavings(item);
 
           return (
-            <div key={item.product.id} className="border-b border-gray-200 pb-4 last:border-b-0">
+            <div key={item.product.id} className="border-b border-gray-200 pb-3 last:border-b-0">
               <div className="flex items-center justify-between mb-2">
                 <div className="flex-1">
-                  <h3 className="font-semibold text-gray-800">{item.product.name}</h3>
-                  <p className="text-gray-600">£{item.product.price.toFixed(2)}</p>
+                  <h3 className="font-semibold text-gray-800 text-sm">{item.product.name}</h3>
+                  <p className="text-gray-600 text-sm">£{item.product.price.toFixed(2)}</p>
                 </div>
                 <div className="flex items-center space-x-2">
                   <button
                     onClick={() => handleQuantityChange(item.product.id, item.quantity - 1)}
-                    className="w-8 h-8 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500"
+                    className="w-6 h-6 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 text-xs"
                   >
                     -
                   </button>
-                  <span className="w-8 text-center font-semibold">{item.quantity}</span>
+                  <span className="w-6 text-center font-semibold text-sm">{item.quantity}</span>
                   <button
                     onClick={() => handleQuantityChange(item.product.id, item.quantity + 1)}
-                    className="w-8 h-8 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500"
+                    className="w-6 h-6 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 text-xs"
                   >
                     +
                   </button>
                 </div>
               </div>
               
-              <div className="text-sm text-gray-600 space-y-1">
-                <p>Item price £{item.product.price.toFixed(2)} * {item.quantity} = £{itemTotal.toFixed(2)}</p>
+              <div className="text-xs text-gray-600 space-y-1">
+                <p>£{item.product.price.toFixed(2)} * {item.quantity} = £{itemTotal.toFixed(2)}</p>
                 {savings > 0 && (
                   <>
                     <p className="text-green-600">Savings £{savings.toFixed(2)}</p>
