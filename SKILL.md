@@ -3,7 +3,7 @@ name: flexpert
 description: React + TypeScript + Vite shopping cart billing application
 ---
 
-# Flexpert
+# flexpert
 
 This repository contains a React + TypeScript + Vite shopping cart billing application.
 
