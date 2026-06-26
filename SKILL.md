@@ -1,5 +1,5 @@
 ---
-name: Flexpert
+name: flexpert
 description: React + TypeScript + Vite shopping cart billing application
 ---
 
