@@ -1,3 +1,8 @@
+---
+name: Flexpert
+description: React + TypeScript + Vite shopping cart billing application
+---
+
 # Flexpert
 
 This repository contains a React + TypeScript + Vite shopping cart billing application.
